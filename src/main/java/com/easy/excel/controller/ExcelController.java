@@ -1,6 +1,9 @@
-package com.howie.easyexcelmethodencapsulation.test;
+package com.easy.excel.controller;
 
-import com.howie.easyexcelmethodencapsulation.excel.ExcelUtil;
+import com.easy.excel.entities.export.ExportInfo;
+import com.easy.excel.excel.ExcelUtil;
+import com.easy.excel.entities.export.ImportInfo;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -21,7 +24,9 @@ import java.util.List;
  * @Time 16:56
  */
 @RestController
+@Slf4j
 public class ExcelController {
+
     /**
      * 读取 Excel（允许多个 sheet）
      */

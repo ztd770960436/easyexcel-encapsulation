@@ -1,12 +1,12 @@
-package com.howie.easyexcelmethodencapsulation;
+package com.easy.excel;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class EasyexcelMethodEncapsulationApplication {
+public class EasyExcelApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(EasyexcelMethodEncapsulationApplication.class, args);
+		SpringApplication.run(EasyExcelApplication.class, args);
 	}
 }

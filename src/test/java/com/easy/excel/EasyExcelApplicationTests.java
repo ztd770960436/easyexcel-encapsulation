@@ -1,4 +1,4 @@
-package com.howie.easyexcelmethodencapsulation;
+package com.easy.excel;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -7,7 +7,7 @@ import org.springframework.test.context.junit4.SpringRunner;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest
-public class EasyexcelMethodEncapsulationApplicationTests {
+public class EasyExcelApplicationTests {
 
 	@Test
 	public void contextLoads() {

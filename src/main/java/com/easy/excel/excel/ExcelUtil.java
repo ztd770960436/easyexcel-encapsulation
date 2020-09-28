@@ -1,4 +1,4 @@
-package com.howie.easyexcelmethodencapsulation.excel;
+package com.easy.excel.excel;
 
 import com.alibaba.excel.ExcelReader;
 import com.alibaba.excel.ExcelWriter;

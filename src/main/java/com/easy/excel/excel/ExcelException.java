@@ -1,4 +1,4 @@
-package com.howie.easyexcelmethodencapsulation.excel;
+package com.easy.excel.excel;
 
 /**
  * Created with IntelliJ IDEA
