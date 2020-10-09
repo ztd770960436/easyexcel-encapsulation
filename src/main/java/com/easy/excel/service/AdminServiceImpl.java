@@ -3,6 +3,7 @@ package com.easy.excel.service;
 import com.easy.excel.entities.AdminFunction;
 import com.easy.excel.entities.Role;
 import com.easy.excel.entities.export.AdminExportInfo;
+import com.easy.excel.entities.export.DiffExportInfo;
 import com.easy.excel.mapper.AdminFunctionMapper;
 import com.easy.excel.mapper.AdminMapper;
 import com.easy.excel.mapper.RoleMapper;
@@ -67,6 +68,13 @@ public class AdminServiceImpl implements AdminService {
         });
         log.info("导出结束");
         return result;
+    }
+
+    @Override
+    public Map<String, List<DiffExportInfo>> getDiffInfo() {
+        // 查询两张表
+        List<AdminFunction> functionList;
+        return null;
     }
 
     public List<AdminExportInfo> getInfo(Admin admin) {
