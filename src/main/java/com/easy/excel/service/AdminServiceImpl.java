@@ -52,7 +52,10 @@ public class AdminServiceImpl implements AdminService {
         // 构造角色和菜单关系
         roleFunctionsMap = roleList.stream().collect(Collectors.toMap(role -> role.getId(), role -> {
             // 找出来所有的 菜单id
-            List<Long> functionIds = Arrays.stream(role.getFuncIds().split(",")).map(id -> Long.valueOf(id)).collect(Collectors.toList());
+            List<Long> functionIds = new ArrayList<>();
+            if (!StringUtils.isEmpty(role.getFuncIds()) && !role.getFuncIds().trim().equals("")) {
+                functionIds = Arrays.stream(role.getFuncIds().split(",")).map(id -> Long.valueOf(id)).collect(Collectors.toList());
+            }
             // 根据 菜单id 获取对应的菜单信息
             List<AdminFunction> adminFunctionList = new ArrayList<>();
             functionIds.forEach(f -> {
@@ -82,7 +85,7 @@ public class AdminServiceImpl implements AdminService {
         // 查询角色信息
         Role role = rolesMap.get(admin.getRoleId());
         List<Long> userFunctions;
-        if (StringUtils.isEmpty(admin.getFunc()) || Objects.isNull(role)) {
+        if (StringUtils.isEmpty(admin.getFunc()) || admin.getFunc().trim().equals("") || Objects.isNull(role)) {
             AdminExportInfo adminExportInfo = new AdminExportInfo();
             adminExportInfo.setName(admin.getUserName());
             if (Objects.nonNull(role)) {
